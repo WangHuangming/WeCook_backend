@@ -1,10 +1,18 @@
 package com.huangming.wecook.dataclass;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Ingredient {
     private String name;
     private String category;
+
+    @JsonProperty("weightInGrams")
     private int weightInGrams;
+    @JsonProperty("purchaseDate")
     private String purchaseDate;
+
+    public Ingredient() {
+    }
 
     public Ingredient(String name, String category, int weightInGrams, String purchaseDate) {
         this.name = name;
