@@ -10,6 +10,9 @@ public class Message {
     private Integer id;
 
     private String role;
+
+    @Lob
+    @Column(columnDefinition = "LONGTEXT")
     private String content;
 
     public Message() {}
